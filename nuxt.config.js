@@ -2,7 +2,10 @@ import pkg from './package'
 
 export default {
   mode: 'universal',
-
+  srcDir: 'app',
+  server: {
+    port: 3333, // デフォルト: 3000
+  },
   /*
   ** Headers of the page
   */
