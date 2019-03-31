@@ -52,6 +52,7 @@ export default {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    baseURL: 'https://nuxt-blog-service-b84d0.firebaseio.com',
   },
 
   /*
