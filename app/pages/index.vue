@@ -22,7 +22,7 @@
 
 <script>
   import {mapGetters,mapActions} from 'vuex'
-  import Cookie from 'universal-cookie'
+  import Cookies from 'universal-cookie'
   export default {
     asyncData({redirect,store}) {
       if(store.getters['user']){
