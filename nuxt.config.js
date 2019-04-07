@@ -32,6 +32,9 @@ export default {
   css: [
     'element-ui/lib/theme-chalk/index.css'
   ],
+  router: {
+    middleware: ['auth-cookie']
+  },
 
   /*
   ** Plugins to load before mounting the App
