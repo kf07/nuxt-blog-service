@@ -30,25 +30,25 @@
 
 <script>
   import moment from '~/plugins/moment'
-  import { mapGetters } from 'vuex'
-  export default {
-    async asyncData({store}){
-      await store.dispatch('posts/fetchPosts')
-    },
-    computed: {
-      showPosts() {
-        return this.posts.map(post => {
-          post.created_at = moment(post.created_at).format('YYYY/MM/DD HH:mm:ss')
-          return post
-        })
+    import { mapGetters } from 'vuex'
+    export default {
+      async asyncData({store}){
+        await store.dispatch('posts/fetchPosts')
       },
-      ...mapGetters('posts',['posts'])
-    },
-    methods: {
-      handleClick(post) {
-        this.$router.push(`/posts/${post.id}`)
+      computed: {
+        showPosts() {
+          return this.posts.map(post => {
+            post.created_at = moment(post.created_at).format('YYYY/MM/DD HH:mm:ss')
+            return post
+          })
+        },
+        ...mapGetters('posts',['posts'])
+      },
+      methods: {
+        handleClick(post) {
+          this.$router.push(`/posts/${post.id}`)
+        }
       }
-    }
   }
 </script>
 
